@@ -100,7 +100,7 @@ $( document ).ready(function() {
             playerAname = $("#playerAnameInput").val();
         else
             playerAname = $("#playerAnameInput").attr("placeholder");
-        if ($("#playerBname").val() != "")
+        if ($("#playerBnameInput").val() != "")
             playerBname = $("#playerBnameInput").val();
         else
             playerBname = $("#playerBnameInput").attr("placeholder");
