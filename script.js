@@ -81,6 +81,7 @@ function reset() {
 }
 
 $( document ).ready(function() {
+    setLanguage();
     $(".cell").click(function() {
         if (inGame != true)
             return 1;
@@ -139,6 +140,10 @@ $( document ).ready(function() {
             $(".square-grid__content").css("color", "#f00");
             symbolColor = "red";
         }
+    });
+
+    $("#change-language").click(function() {
+        setLanguage();
     });
 
 });
