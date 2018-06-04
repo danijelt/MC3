@@ -7,6 +7,7 @@ var playerBname = "B";
 var freshStart = true;
 var playerTurn = null;
 var theme = "light";
+var symbolColor = "red";
 
 function playerSetShape(player, shape) {
     if (player === playerAname) {
@@ -121,6 +122,22 @@ $( document ).ready(function() {
             $(".form-control").css("color", "#495057");
             $(".form-control").css("border", "1px solid #ced4da");
             theme = "light";
+        }
+    });
+
+    $("#rgb-color").click(function() {
+        if (symbolColor == "red") {
+            $(".square-grid__content").css("color", "#0f0");
+            symbolColor = "green";
+        } else if (symbolColor == "green") {
+            $(".square-grid__content").css("color", "#00f");
+            symbolColor = "blue";
+        } else if (symbolColor == "blue") {
+            $(".square-grid__content").css("color", "#f00");
+            symbolColor = "red";
+        } else {
+            $(".square-grid__content").css("color", "#f00");
+            symbolColor = "red";
         }
     });
 
