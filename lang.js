@@ -25,8 +25,8 @@ var translate = function (jsdata) {
 			strTr = strTr.join("");
 		$(this).html(strTr);
     });
-    $("#playerAname").attr("placeholder", jsdata["playerAname"]);
-    $("#playerBname").attr("placeholder", jsdata["playerBname"]);
+    $("#playerAnameInput").attr("placeholder", jsdata["playerAname"]);
+    $("#playerBnameInput").attr("placeholder", jsdata["playerBname"]);
 }
 
 function setLanguage() {

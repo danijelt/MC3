@@ -96,14 +96,14 @@ $( document ).ready(function() {
     });
 
     $("#play-button").click(function() {
-        if ($("#playerAname").val() != "")
-            playerAname = $("#playerAname").val();
+        if ($("#playerAnameInput").val() != "")
+            playerAname = $("#playerAnameInput").val();
         else
-            playerAname = $("#playerAname").attr("placeholder");
+            playerAname = $("#playerAnameInput").attr("placeholder");
         if ($("#playerBname").val() != "")
-            playerBname = $("#playerBname").val();
+            playerBname = $("#playerBnameInput").val();
         else
-            playerBname = $("#playerBname").attr("placeholder");
+            playerBname = $("#playerBnameInput").attr("placeholder");
         reset();
         if (freshStart === true) {
             playerTurn = playerAname;

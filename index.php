@@ -27,8 +27,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="form-inline">
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerAname" placeholder="" required="required">
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerBname" placeholder="" required="required">
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerAnameInput" placeholder="" required="required">
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerBnameInput" placeholder="" required="required">
                     <button class="btn btn-primary mb-2" id="play-button" tkey="play-button"></button>
                 </div>
             </div>
