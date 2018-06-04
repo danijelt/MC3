@@ -114,12 +114,16 @@ $( document ).ready(function() {
     $("#play-button").click(function() {
         if ($("#playerAnameInput").val() != "")
             playerAname = $("#playerAnameInput").val();
-        else
+        else {
             playerAname = $("#playerAnameInput").attr("placeholder");
+            $("#playerAnameInput").val(playerAname);
+        }
         if ($("#playerBnameInput").val() != "")
             playerBname = $("#playerBnameInput").val();
-        else
+        else {
             playerBname = $("#playerBnameInput").attr("placeholder");
+            $("#playerBnameInput").val(playerBname);
+        }
         reset();
         setStats();
         if (freshStart === true) {
