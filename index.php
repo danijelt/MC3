@@ -34,19 +34,6 @@
                 <button type="submit" class="btn btn-secondary fas fa-music"></button>
             </div>
         </div>
-        <!--<div class="row">
-            <div class="col-lg-12">
-            <table>
-                <tr>
-                    <td><i id="cell1"></i></td><td><i id="cell2"></i></td><td><i id="cell3"></i></td>
-                </tr><tr>
-                    <td><i id="cell4"></i></td><td><i id="cell5"></i></td><td><i id="cell6"></i></td>
-                </tr><tr>
-                    <td><i id="cell7"></i></td><td><i id="cell8"></i></td><td><i id="cell9"></i></td>
-                </tr>
-            </table>
-            </div>
-        </div>-->
         <div class="row playarea">
             <div class="col-lg-6 offset-lg-3">
                 <div class="square-grid">
