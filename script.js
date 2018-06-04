@@ -110,10 +110,16 @@ $( document ).ready(function() {
         if (theme == "light") {
             $("body").css("background-color", "#222");
             $(".square-grid__cell").css("box-shadow", "0 0 0 1px #777");
+            $(".form-control").css("background-color", "#222");
+            $(".form-control").css("color", "#aaa");
+            $(".form-control").css("border", "1px solid #777");
             theme = "dark";
         } else {
             $("body").css("background-color", "#fff");
             $(".square-grid__cell").css("box-shadow", "0 0 0 1px #000");
+            $(".form-control").css("background-color", "#fff");
+            $(".form-control").css("color", "#495057");
+            $(".form-control").css("border", "1px solid #ced4da");
             theme = "light";
         }
     });
