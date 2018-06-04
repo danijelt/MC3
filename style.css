@@ -13,18 +13,6 @@ table {
     margin: 0 auto;
 }
 
-td {
-    background-color: rgb(17, 255, 203);
-    width: 33%;
-    padding-bottom: 33%;
-    /*position: relative;*/
-    /*display: inline-block;*/
-    border: 5px solid #000;
-    cursor: pointer;
-    font-size: 5em;
-    line-height: 1;
-    text-align: center;
-}
 
 /*i {*/
     /*padding-left: 50%;*/
