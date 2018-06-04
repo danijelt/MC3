@@ -4,7 +4,8 @@ var lang_hr = {
     "change-language": "English",
     "play-button": "Igraj!",
     "playerAname": "Igrač 1",
-    "playerBname": "Igrač 2"
+    "playerBname": "Igrač 2",
+    "result": "Rezultat:"
 }
 
 var lang_en = {
@@ -13,7 +14,8 @@ var lang_en = {
     "change-language": "Hrvatski",
     "play-button": "Play!",
     "playerAname": "Player 1",
-    "playerBname": "Player 2"
+    "playerBname": "Player 2",
+    "result": "Result:"
 }
 
 var currentLang = "";

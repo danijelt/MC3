@@ -6,6 +6,8 @@ var playerAname = "A";
 var playerBname = "B";
 var freshStart = true;
 var playerTurn = null;
+var playerAwins = 0;
+var playerBwins = 0;
 var theme = "light";
 var symbolColor = "red";
 
@@ -69,8 +71,12 @@ function checkPlayerWin() {
         win = 1;
     //console.log("win status: " + win);
     if (win === 1) {
-        alert(playerTurn + " je pobijedio!!!11!!");
+        if (playerTurn == playerAname)
+            playerAwins++;
+        else if (playerTurn == playerBname)
+            playerBwins++;
         inGame = false;
+        setStats();
     }
 }
 
@@ -80,8 +86,18 @@ function reset() {
     });
 }
 
+function setStats() {
+    $("#playerAshape").addClass(playerAshape);
+    $("#playerBshape").addClass(playerBshape);
+    $("#playerAnameP").text(playerAname);
+    $("#playerBnameP").text(playerBname);
+    $("#playerAwins").text(playerAwins);
+    $("#playerBwins").text(playerBwins);
+}
+
 $( document ).ready(function() {
     setLanguage();
+    setStats();
     $(".cell").click(function() {
         if (inGame != true)
             return 1;

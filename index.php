@@ -87,7 +87,15 @@
                 </div>
             </div>
         </div>
-        <div class="row stats">
+        <br/>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="stats text-center">
+                    <i id="playerAshape"></i>&nbsp;<p id="playerAnameP"></p> | <i id="playerBshape"></i>&nbsp;<p id="playerBnameP"></p>
+                    <br/>
+                    <p tkey="result"></p>&nbsp;<p id="playerAwins"></p>:<p id="playerBwins"></p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

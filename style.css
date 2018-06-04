@@ -23,6 +23,15 @@ table {
     /*position: absolute;*/
 /*}*/
 
+.stats {
+    background-color: rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 0 1px #000;
+}
+
+.stats p {
+    display: inline;
+}
+
 .square-grid {
     display: flex;
     flex-wrap: wrap;
