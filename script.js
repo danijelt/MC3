@@ -93,8 +93,10 @@ $( document ).ready(function() {
     });
 
     $("#play-button").click(function() {
-        playerAname = $("#playerAname").val();
-        playerBname = $("#playerBname").val();
+        if ($("#playerAname").val() != "")
+            playerAname = $("#playerAname").val();
+        if ($("#playerBname").val() != "")
+            playerBname = $("#playerBname").val();
         reset();
         if (freshStart === true) {
             playerTurn = playerAname;
