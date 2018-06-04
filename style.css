@@ -6,6 +6,10 @@
     height: 100%;
 }
 
+body {
+    background-color: #fff;
+}
+
 
 table {
     border-collapse: collapse;
@@ -27,7 +31,7 @@ table {
 
 .square-grid__cell {
     background-color: rgba(0, 0, 0, 0.03);
-    box-shadow: 0 0 0 1px black;
+    box-shadow: 0 0 0 1px #000;
     overflow: hidden;
     position: relative;
 }
@@ -43,6 +47,7 @@ table {
     height: 100%;
     padding-top: 25%;
     padding-bottom: 25%;
+    color: #f00;
 }
 
 .square-grid__cell:after {
