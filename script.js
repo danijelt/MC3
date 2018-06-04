@@ -98,8 +98,12 @@ $( document ).ready(function() {
     $("#play-button").click(function() {
         if ($("#playerAname").val() != "")
             playerAname = $("#playerAname").val();
+        else
+            playerAname = $("#playerAname").attr("placeholder");
         if ($("#playerBname").val() != "")
             playerBname = $("#playerBname").val();
+        else
+            playerBname = $("#playerBname").attr("placeholder");
         reset();
         if (freshStart === true) {
             playerTurn = playerAname;
