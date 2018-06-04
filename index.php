@@ -11,9 +11,10 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
+    <br/>
+    <div class="container">
         <div class="row">
-            <div class="dropdown col-lg-2 mx-auto">
+            <div class="dropdown col-lg-1 offset-lg-2">
                 <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-ellipsis-h"></i>
                 </button>
@@ -23,14 +24,14 @@
                     <a class="dropdown-item" href="#" id="rgb-color">Promijeni boju</a>
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <div class="form-inline">
                     <input type="text" class="form-control mb-2 mr-sm-2" id="playerAname" placeholder="Igrač 1" required="required">
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerBname" placeholder="Igrač 2">
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerBname" placeholder="Igrač 2" required="required">
                     <button class="btn btn-primary mb-2" id="play-button">Igraj</button>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
                 <button type="submit" class="btn btn-secondary fas fa-music"></button>
             </div>
         </div>
