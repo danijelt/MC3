@@ -14,9 +14,9 @@ function playerSetShape(player, shape) {
         playerAshape = shape;
     } else if (player === playerBname) {
         playerBshape = shape;
-    } else {
+    } /*else {
         console.error("Unknown player!");
-    }
+    }*/
 }
 
 function setPlayerTurn() {
@@ -32,7 +32,7 @@ function setPlayerTurn() {
 function setCell(cell) {
     var content = cell.hasClass(playerAshape.split(" ")[1]) || cell.hasClass(playerBshape.split(" ")[1]);
     if(content) {
-        console.log("cell not empty, exiting");
+        //console.log("cell not empty, exiting");
         return 1;
     }
     console.log("setting shape: " + playerTurnShape);
@@ -67,7 +67,7 @@ function checkPlayerWin() {
         win = 1;
     if (checkCell("#cell1") && checkCell("#cell2") && checkCell("#cell3"))
         win = 1;
-    console.log("win status: " + win);
+    //console.log("win status: " + win);
     if (win === 1) {
         alert(playerTurn + " je pobijedio!!!11!!");
         inGame = false;
@@ -85,13 +85,13 @@ $( document ).ready(function() {
     $(".cell").click(function() {
         if (inGame != true)
             return 1;
-        console.log("clicked cell");
+        //console.log("clicked cell");
         cell = $(this).find("i");
-        console.log("entering setCell()");
+        //console.log("entering setCell()");
         setCell(cell);
-        console.log("entering checkPlayerWin()");
+        //console.log("entering checkPlayerWin()");
         checkPlayerWin();
-        console.log("entering setPlayerTurn()")
+        //console.log("entering setPlayerTurn()")
         setPlayerTurn();
     });
 
