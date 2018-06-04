@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="lang.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -19,20 +20,20 @@
                     <i class="fas fa-ellipsis-h"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" id="change-theme">Tamna tema</a>
-                    <a class="dropdown-item" href="#" id="switch-language">Jezik</a>
-                    <a class="dropdown-item" href="#" id="rgb-color">Promijeni boju</a>
+                    <a class="dropdown-item" href="#" id="change-theme" tkey="change-theme"></a>
+                    <a class="dropdown-item" href="#" id="rgb-color" tkey="rgb-color"></a>
+                    <a class="dropdown-item" href="#" id="change-language" tkey="change-language"></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-inline">
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerAname" placeholder="Igrač 1" required="required">
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerBname" placeholder="Igrač 2" required="required">
-                    <button class="btn btn-primary mb-2" id="play-button">Igraj</button>
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerAname" placeholder="" required="required">
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="playerBname" placeholder="" required="required">
+                    <button class="btn btn-primary mb-2" id="play-button" tkey="play-button"></button>
                 </div>
             </div>
             <div class="col-lg-3">
-                <button type="submit" class="btn btn-secondary fas fa-music"></button>
+                <button class="btn btn-secondary fas fa-music"></button>
             </div>
         </div>
         <div class="row playarea">
