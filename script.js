@@ -121,6 +121,7 @@ $( document ).ready(function() {
         else
             playerBname = $("#playerBnameInput").attr("placeholder");
         reset();
+        setStats();
         if (freshStart === true) {
             playerTurn = playerAname;
             freshStart = false;
