@@ -18,7 +18,7 @@
                     <i class="fas fa-ellipsis-h"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" id="dark-theme">Tamna tema</a>
+                    <a class="dropdown-item" href="#" id="change-theme">Tamna tema</a>
                     <a class="dropdown-item" href="#" id="switch-language">Jezik</a>
                     <a class="dropdown-item" href="#" id="rgb-color">Promijeni boju</a>
                 </div>

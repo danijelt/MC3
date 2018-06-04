@@ -6,6 +6,7 @@ var playerAname = "A";
 var playerBname = "B";
 var freshStart = true;
 var playerTurn = null;
+var theme = "light";
 
 function playerSetShape(player, shape) {
     if (player === playerAname) {
@@ -104,4 +105,17 @@ $( document ).ready(function() {
         }
         inGame = true;
     });
+
+    $("#change-theme").click(function() {
+        if (theme == "light") {
+            $("body").css("background-color", "#222");
+            $(".square-grid__cell").css("box-shadow", "0 0 0 1px #777");
+            theme = "dark";
+        } else {
+            $("body").css("background-color", "#fff");
+            $(".square-grid__cell").css("box-shadow", "0 0 0 1px #000");
+            theme = "light";
+        }
+    });
+
 });
