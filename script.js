@@ -154,15 +154,19 @@ $( document ).ready(function() {
     $("#rgb-color").click(function() {
         if (symbolColor == "red") {
             $(".square-grid__content").css("color", "#0f0");
+            $("#rgb-color").css("color", "green");
             symbolColor = "green";
         } else if (symbolColor == "green") {
             $(".square-grid__content").css("color", "#00f");
+            $("#rgb-color").css("color", "blue");
             symbolColor = "blue";
         } else if (symbolColor == "blue") {
             $(".square-grid__content").css("color", "#f00");
+            $("#rgb-color").css("color", "red");
             symbolColor = "red";
         } else {
             $(".square-grid__content").css("color", "#f00");
+            $("#rgb-color").css("color", "red");
             symbolColor = "red";
         }
     });

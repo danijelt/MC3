@@ -17,6 +17,9 @@ table {
     margin: 0 auto;
 }
 
+#rgb-color {
+    color: red;
+}
 
 /*i {*/
     /*padding-left: 50%;*/
