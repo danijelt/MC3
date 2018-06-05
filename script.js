@@ -246,11 +246,15 @@ $( document ).ready(function() {
     });
 
     $("#playerAshape").click(function() {
+        if (inGame == true)
+            return false;
         setShape = "A";
         $("#shape-modal").modal("show");
     });
 
     $("#playerBshape").click(function() {
+        if (inGame == true)
+            return false;
         setShape = "B";
         $("#shape-modal").modal("show");
     });
