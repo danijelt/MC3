@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <button class="btn btn-secondary fas fa-music"></button>
+                <button class="btn btn-secondary fas fa-music" id="music-button"></button>
             </div>
         </div>
         <div class="row playarea">
@@ -134,6 +134,7 @@
                 </div>
             </div>
         </div>
+        <audio id="music-player" hidden loop src="song.webm"></audio>
     </div>
 </body>
 </html>

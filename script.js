@@ -259,7 +259,7 @@ $( document ).ready(function() {
         $("#shape-modal").modal("show");
     });
 
-    $('#shape-body').on('click', '>', function() {
+    $("#shape-body").on("click", ">", function() {
         if (inGame == true)
             return false;
         if (setShape == "A") {
@@ -280,6 +280,14 @@ $( document ).ready(function() {
             $("#playerBshape").addClass(playerBshape);
         }
         $("#shape-modal").modal("hide");
+    });
+
+    $("#music-button").click(function() {
+        var player = $("#music-player")[0];
+        if (player.paused)
+            player.play();
+        else
+            player.pause();
     });
 
     $("#change-language").click(function() {
