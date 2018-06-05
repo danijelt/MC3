@@ -77,6 +77,8 @@ function checkPlayerWin() {
             playerBwins++;
         inGame = false;
         setStats();
+        $("#playerAnameInput").removeAttr('disabled');
+        $("#playerBnameInput").removeAttr('disabled');
     }
 }
 
@@ -112,6 +114,8 @@ $( document ).ready(function() {
     });
 
     $("#play-button").click(function() {
+        $("#playerAnameInput").attr('disabled', 'disabled');
+        $("#playerBnameInput").attr('disabled', 'disabled');
         resetBlink();
         if ($("#playerAnameInput").val() != "") {
             if (playerAname != $("#playerAnameInput").val())
