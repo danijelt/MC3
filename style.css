@@ -17,10 +17,6 @@ table {
     margin: 0 auto;
 }
 
-#rgb-color {
-    color: red;
-}
-
 /*i {*/
     /*padding-left: 50%;*/
     /*position: absolute;*/
@@ -38,6 +34,15 @@ table {
 #scoreboard {
     text-decoration: underline;
     cursor: pointer;
+}
+
+#playerAshape, #playerBshape {
+    color: red;
+    cursor: pointer;
+}
+
+#shape-body {
+    font-size: 28pt;
 }
 
 .square-grid {
