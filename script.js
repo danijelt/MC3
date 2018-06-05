@@ -153,6 +153,8 @@ $( document ).ready(function() {
             $(".form-control").css("background-color", "#222");
             $(".form-control").css("color", "#aaa");
             $(".form-control").css("border", "1px solid #777");
+            $(".stats").css("color", "#aaa");
+            $(".stats").css("box-shadow", "0 0 0 1px #777");
             theme = "dark";
         } else {
             $("body").css("background-color", "#fff");
@@ -160,6 +162,8 @@ $( document ).ready(function() {
             $(".form-control").css("background-color", "#fff");
             $(".form-control").css("color", "#495057");
             $(".form-control").css("border", "1px solid #ced4da");
+            $(".stats").css("color", "#212529");
+            $(".stats").css("box-shadow", "0 0 0 1px #000");
             theme = "light";
         }
     });
