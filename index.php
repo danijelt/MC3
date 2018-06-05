@@ -110,6 +110,30 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="shape-modal" tabindex="-1" role="dialog" aria-labelledby="shape-modal-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" id="shape-body">
+                        <i class="fas fa-times"></i>
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-address-book"></i>
+                        <i class="fas fa-address-card"></i>
+                        <i class="fas fa-anchor"></i>
+                        <i class="fas fa-bomb"></i>
+                        <i class="fas fa-dollar-sign"></i>
+                        <i class="fas fa-euro-sign"></i>
+                        <i class="fas fa-gift"></i>
+                        <i class="fas fa-"></i>
+                        <i class="fas fa-"></i>
+                        <i class="fas fa-"></i>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" tkey="scoreboard-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 var playerAshape = "fas fa-times";
 var playerBshape = "fas fa-circle";
 var playerTurnShape = playerAshape;
+var setShape = "";
 var inGame = false;
 var playerAname = "A";
 var playerBname = "B";
@@ -102,7 +103,7 @@ function uploadResult() {
 
 function reset() {
     $(".playarea").find(".cell").find("i").each(function() {
-        $(this).removeClass(playerAshape).removeClass(playerBshape);
+        $(this).removeClass();
     });
 }
 
@@ -238,6 +239,37 @@ $( document ).ready(function() {
             }
             $("#scoreboard-body").html(htmlstr);
         }, "json");
+    });
+
+    $("#playerAshape").click(function() {
+        setShape = "A";
+        $("#shape-modal").modal("show");
+    });
+
+    $("#playerBshape").click(function() {
+        setShape = "B";
+        $("#shape-modal").modal("show");
+    });
+
+    $('#shape-body').on('click', '>', function() {
+        if (setShape == "A") {
+            if ($(this).attr('class') == playerBshape)
+                return false;
+            $("#playerAshape").removeClass()
+            if (playerTurnShape == playerAshape)
+                playerTurnShape = $(this).attr('class');
+            playerAshape = $(this).attr('class');
+            $("#playerAshape").addClass(playerAshape);
+        } else if (setShape == "B") {
+            if ($(this).attr('class') == playerAshape)
+                return false;
+            $("#playerBshape").removeClass();
+            if (playerTurnShape == playerBshape)
+                playerTurnShape = $(this).attr('class');
+            playerBshape = $(this).attr('class');
+            $("#playerBshape").addClass(playerBshape);
+        }
+        $("#shape-modal").modal("hide");
     });
 
     $("#change-language").click(function() {
