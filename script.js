@@ -37,7 +37,7 @@ function setCell(cell) {
         //console.log("cell not empty, exiting");
         return 1;
     }
-    console.log("setting shape: " + playerTurnShape);
+    //console.log("setting shape: " + playerTurnShape);
     cell.addClass(playerTurnShape);
 }
 
