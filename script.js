@@ -10,6 +10,7 @@ var playerAwins = 0;
 var playerBwins = 0;
 var theme = "light";
 var symbolColor = "red";
+var blinkerInterval = 0;
 
 function playerSetShape(player, shape) {
     if (player === playerAname) {
@@ -51,24 +52,31 @@ function checkCell(cell) {
 
 function checkPlayerWin() {
     var win = 0;
-    if (checkCell("#cell1") && checkCell("#cell2") && checkCell("#cell3"))
+    if (checkCell("#cell1") && checkCell("#cell2") && checkCell("#cell3")) {
+        blinkWin([1,2,3]);
         win = 1;
-    if (checkCell("#cell4") && checkCell("#cell5") && checkCell("#cell6"))
+    } else if (checkCell("#cell4") && checkCell("#cell5") && checkCell("#cell6")) {
+        blinkWin([4,5,6]);
         win = 1;
-    if (checkCell("#cell7") && checkCell("#cell8") && checkCell("#cell9"))
+    } else if (checkCell("#cell7") && checkCell("#cell8") && checkCell("#cell9")) {
+        blinkWin([7,8,9]);
         win = 1;
-    if (checkCell("#cell1") && checkCell("#cell4") && checkCell("#cell7"))
+    } else if (checkCell("#cell1") && checkCell("#cell4") && checkCell("#cell7")) {
+        blinkWin([1,4,7]);
         win = 1;
-    if (checkCell("#cell2") && checkCell("#cell5") && checkCell("#cell8"))
+    } else if (checkCell("#cell2") && checkCell("#cell5") && checkCell("#cell8")) {
+        blinkWin([2,5,8]);
         win = 1;
-    if (checkCell("#cell3") && checkCell("#cell6") && checkCell("#cell9"))
+    } else if (checkCell("#cell3") && checkCell("#cell6") && checkCell("#cell9")) {
+        blinkWin([3,6,9]);
         win = 1;
-    if (checkCell("#cell1") && checkCell("#cell5") && checkCell("#cell9"))
+    } else if (checkCell("#cell1") && checkCell("#cell5") && checkCell("#cell9")) {
+        blinkWin([1,5,9]);
         win = 1;
-    if (checkCell("#cell7") && checkCell("#cell5") && checkCell("#cell3"))
+    } else if (checkCell("#cell7") && checkCell("#cell5") && checkCell("#cell3")) {
+        blinkWin([7,5,3]);
         win = 1;
-    if (checkCell("#cell1") && checkCell("#cell2") && checkCell("#cell3"))
-        win = 1;
+    }
     //console.log("win status: " + win);
     if (win === 1) {
         if (playerTurn == "A")
@@ -95,6 +103,21 @@ function setStats() {
     $("#playerBnameP").text(playerBname);
     $("#playerAwins").text(playerAwins);
     $("#playerBwins").text(playerBwins);
+}
+
+function blinkWin(cells) {
+    blinkerInterval = setInterval(function() {
+        for (var cell in cells) {
+            $("#cell" + cells[cell] + " > i").toggle();
+        }
+    }, 500);
+}
+
+function resetBlink() {
+    clearInterval(blinkerInterval);
+    for (i=1; i<10; i++) {
+        $("#cell" + i + " > i").show();
+    }
 }
 
 $( document ).ready(function() {
