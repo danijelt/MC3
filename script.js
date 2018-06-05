@@ -112,15 +112,24 @@ $( document ).ready(function() {
     });
 
     $("#play-button").click(function() {
-        if ($("#playerAnameInput").val() != "")
+        resetBlink();
+        if ($("#playerAnameInput").val() != "") {
+            if (playerAname != $("#playerAnameInput").val())
+                playerAwins = 0;
             playerAname = $("#playerAnameInput").val();
-        else {
+        } else {
+            if (playerAname != $("#playerAnameInput").attr("placeholder"))
+                playerAwins = 0;
             playerAname = $("#playerAnameInput").attr("placeholder");
             $("#playerAnameInput").val(playerAname);
         }
-        if ($("#playerBnameInput").val() != "")
+        if ($("#playerBnameInput").val() != "") {
+            if (playerBname != $("#playerBnameInput").val())
+                playerBwins = 0;
             playerBname = $("#playerBnameInput").val();
-        else {
+        } else {
+            if (playerBname != $("#playerBnameInput").attr("placeholder"))
+                playerBwins = 0;
             playerBname = $("#playerBnameInput").attr("placeholder");
             $("#playerBnameInput").val(playerBname);
         }
