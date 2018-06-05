@@ -36,10 +36,12 @@ function setCell(cell) {
     var content = cell.hasClass(playerAshape.split(" ")[1]) || cell.hasClass(playerBshape.split(" ")[1]);
     if(content) {
         //console.log("cell not empty, exiting");
-        return 1;
+        return false;
+    } else {
+        //console.log("setting shape: " + playerTurnShape);
+        cell.addClass(playerTurnShape);
+        return true;
     }
-    //console.log("setting shape: " + playerTurnShape);
-    cell.addClass(playerTurnShape);
 }
 
 function checkCell(cell) {
@@ -129,7 +131,8 @@ $( document ).ready(function() {
         //console.log("clicked cell");
         cell = $(this).find("i");
         //console.log("entering setCell()");
-        setCell(cell);
+        if (!setCell(cell))
+            return false;
         //console.log("entering checkPlayerWin()");
         checkPlayerWin();
         //console.log("entering setPlayerTurn()")
