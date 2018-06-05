@@ -94,6 +94,19 @@
                     <i id="playerAshape"></i>&nbsp;<p id="playerAnameP"></p> | <i id="playerBshape"></i>&nbsp;<p id="playerBnameP"></p>
                     <br/>
                     <p tkey="result"></p>&nbsp;<p id="playerAwins"></p>:<p id="playerBwins"></p>
+                    <br/>
+                    <p id="scoreboard" tkey="scoreboard" data-toggle="modal" data-target="#scoreboard-modal"></p>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="scoreboard-modal" tabindex="-1" role="dialog" aria-labelledby="scoreboard-modal-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body" id="scoreboard-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" tkey="scoreboard-close"></button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -35,6 +35,11 @@ table {
     display: inline;
 }
 
+#scoreboard {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .square-grid {
     display: flex;
     flex-wrap: wrap;

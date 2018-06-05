@@ -86,10 +86,18 @@ function checkPlayerWin() {
         else if (playerTurn == "B")
             playerBwins++;
         inGame = false;
+        uploadResult();
         setStats();
         $("#playerAnameInput").removeAttr('disabled');
         $("#playerBnameInput").removeAttr('disabled');
     }
+}
+
+function uploadResult() {
+    if (playerTurn == "A")
+        $.post("results.php", "set_result=1&player=" + playerAname);
+    else if (playerTurn == "B")
+        $.post("results.php", "set_result=1&player=" + playerBname);
 }
 
 function reset() {
@@ -212,6 +220,24 @@ $( document ).ready(function() {
             $("#rgb-color").css("color", "red");
             symbolColor = "red";
         }
+    });
+
+    $("#scoreboard").click(function() {
+        $.post("results.php", "get_results=1", function(data) {
+            var json = $.parseJSON(JSON.stringify(data));
+            var sorted = [];
+            var htmlstr = "";
+            var i = 1;
+            for (var player in json) {
+                sorted.push([player, json[player]]);
+            }
+            sorted.sort(function (a,b) { return b[1] - a[1]; });
+            for (var rank in sorted) {
+                htmlstr += i + ". " + sorted[rank][0] + " - " + sorted[rank][1] + "<br/>";
+                i++;
+            }
+            $("#scoreboard-body").html(htmlstr);
+        }, "json");
     });
 
     $("#change-language").click(function() {

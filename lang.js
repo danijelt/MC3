@@ -5,7 +5,9 @@ var lang_hr = {
     "play-button": "Igraj!",
     "playerAname": "Igrač 1",
     "playerBname": "Igrač 2",
-    "result": "Rezultat:"
+    "result": "Rezultat:",
+    "scoreboard": "Svi rezultati",
+    "scoreboard-close": "Zatvori"
 }
 
 var lang_en = {
@@ -15,7 +17,9 @@ var lang_en = {
     "play-button": "Play!",
     "playerAname": "Player 1",
     "playerBname": "Player 2",
-    "result": "Result:"
+    "result": "Result:",
+    "scoreboard": "All results",
+    "scoreboard-close": "Close"
 }
 
 var currentLang = "";
