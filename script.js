@@ -22,11 +22,11 @@ function playerSetShape(player, shape) {
 }
 
 function setPlayerTurn() {
-    if (playerTurn === playerAname) {
-        playerTurn = playerBname;
+    if (playerTurn === "A") {
+        playerTurn = "B";
         playerTurnShape = playerBshape;
     } else {
-        playerTurn = playerAname;
+        playerTurn = "A";
         playerTurnShape = playerAshape;
     }
 }
@@ -71,9 +71,9 @@ function checkPlayerWin() {
         win = 1;
     //console.log("win status: " + win);
     if (win === 1) {
-        if (playerTurn == playerAname)
+        if (playerTurn == "A")
             playerAwins++;
-        else if (playerTurn == playerBname)
+        else if (playerTurn == "B")
             playerBwins++;
         inGame = false;
         setStats();
@@ -127,7 +127,7 @@ $( document ).ready(function() {
         reset();
         setStats();
         if (freshStart === true) {
-            playerTurn = playerAname;
+            playerTurn = "A";
             freshStart = false;
         }
         inGame = true;
