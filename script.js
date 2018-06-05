@@ -252,6 +252,8 @@ $( document ).ready(function() {
     });
 
     $('#shape-body').on('click', '>', function() {
+        if (inGame == true)
+            return false;
         if (setShape == "A") {
             if ($(this).attr('class') == playerBshape)
                 return false;
